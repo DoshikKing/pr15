@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta xmlns:th="http://www.thymeleaf.org">
+    <title>Home</title>
+</head>
+<body>
+<div>
+    <form method="post" action="/home/addBank">
+        <label>
+            <input type="text" name="name" placeholder="bank name...">
+        </label>
+        <label>
+            <input type="text" name="address" placeholder="bank address...">
+        </label>
+        <button type="submit">add new bank</button>
+    </form>
+    <form method="post" action="/home/addCard">
+        <label>
+            <input type="number" name="cardNumber" placeholder="card number...">
+        </label>
+        <label>
+            <input type="number" name="code" placeholder="card code...">
+        </label>
+        <button type="submit">add new card</button>
+    </form>
+    <form method="get" action="/home/show">
+        <input type="submit" value="Show">
+    </form>
+    <h2></h2>
+    <table width="100%"><tr><td width="100%"><iframe src="/home/show"></iframe></td></tr></table>
+</div>
+
+</body>
+</html>
